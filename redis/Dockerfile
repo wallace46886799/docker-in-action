@@ -2,7 +2,7 @@
 FROM redis
 
 #镜像创建者
-MAINTAINER Frank "zhangfu@i2finance.net"
+MAINTAINER Frank "46886799@163.com"
 
 WORKDIR /data
 
