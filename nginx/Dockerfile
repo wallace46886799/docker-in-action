@@ -2,7 +2,7 @@
 FROM nginx
 
 #镜像创建者
-MAINTAINER Frank "zhangfu@i2finance.net"
+MAINTAINER Frank "46886799@163.com"
 
 #用来设置环境变量,KV结构
 #ENV NGINX_VERSION 1.10.1-1~jessie
