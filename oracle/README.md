@@ -14,3 +14,24 @@ docker run -d --name oracle_11g_myproj -p 1521:1521 oracle_11g_myproj:v1 -v ${pw
 
 
 #docker run -d --name oracle_11g_myproj -p 1521:1521 oracle_11g_myproj:v1 -v /Users/Frank/Work/Frameworks/GitHub/docker-in-action/oracle/data:/home/oracle/app/oracle/oradata -v /Users/Frank/Work/Frameworks/GitHub/docker-in-action/oracle/flash_recovery_area/helowin:/home/oracle/app/oracle/flash_recovery_area/helowin
+
+
+
+----------------------------------------
+1.进入容器 docker exec -it 容器ID /bin/bash
+
+2.加载环境变量 source /home/oracle/.bash_profile
+
+3.登录 sqlplus /nolog
+
+connect /as sysdba 到这里就可以进行您想要的任何操作了
+
+容器系统用户 root：helowin
+
+（如需用plsql工具连接 请设置用户和密码） 举例：
+
+create user test identified by test;
+
+grant connect,resource,dba to test;
+
+----------------------------------------
