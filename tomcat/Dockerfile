@@ -9,8 +9,7 @@ ENV TOMCAT_MAJOR 8
 ENV TOMCAT_VERSION 8.0.42
 
 #安装软件用
-RUN mkdir -p /usr/local/tomcat/webpps/myproj
-VOLUME /usr/local/tomcat/webpps/myproj
+RUN mkdir -p /usr/local/tomcat/webapps/myproj
 #安装软件用
 
 
