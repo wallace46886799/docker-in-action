@@ -17,4 +17,3 @@ EXPOSE 6379
 
 
 #Container启动时执行的命令，但是一个Dockerfile中只能有一条CMD命令，多条则只执行最后一条CMD.
-CMD ["redis-server", "/etc/redis/redis.conf"]
