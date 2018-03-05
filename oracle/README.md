@@ -1,3 +1,4 @@
+# 操作步骤
 PS.请先阅读：https://dev.aliyun.com/detail.html?spm=5176.1972343.2.2.2f075aaaBU6Ush&repoId=1969
 
 0、构建本地镜像
@@ -17,7 +18,7 @@ docker run -d --name oracle_11g_myproj -p 1521:1521 oracle_11g_myproj:v1 -v ${pw
 
 
 
-----------------------------------------
+# 创建用户
 1.进入容器 docker exec -it 容器ID /bin/bash
 
 2.加载环境变量 source /home/oracle/.bash_profile
@@ -34,4 +35,9 @@ create user test identified by test;
 
 grant connect,resource,dba to test;
 
-----------------------------------------
+
+
+
+# 常见问题
+## 解决 ORA-21561: OID generation failed
+http://blog.csdn.net/elonlink/article/details/52635523
