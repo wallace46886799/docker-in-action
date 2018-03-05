@@ -2,13 +2,15 @@
 FROM tomcat:8.0
 
 #镜像创建者
-MAINTAINER Frank "zhangfu@i2finance.net"
+MAINTAINER Frank "46886799@163.com"
 
 #用来设置环境变量,KV结构
 ENV TOMCAT_MAJOR 8
 ENV TOMCAT_VERSION 8.0.42
 
 #安装软件用
+RUN mkdir -p /usr/local/tomcat/webpps/myproj
+VOLUME /usr/local/tomcat/webpps/myproj
 #安装软件用
 
 

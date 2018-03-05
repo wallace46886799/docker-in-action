@@ -1,0 +1,14 @@
+webapp:
+  build: server
+  ports:
+    - "8080:8080"
+  links:
+    - database
+
+database:
+  build: database
+  restart: always
+  ports:
+      - "3306:3306"
+
+
