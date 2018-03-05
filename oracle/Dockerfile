@@ -15,4 +15,3 @@ EXPOSE 1521 1521
 
 
 #Container启动时执行的命令，但是一个Dockerfile中只能有一条CMD命令，多条则只执行最后一条CMD.
-CMD ["/home/oracle/app/oracle/product/11.2.0/dbhome_2/bin/dbstart"]

@@ -1,4 +1,4 @@
-#基于哪个镜像，使用“docker build -t i2fsp_mysql:0.1 .”制作镜像
+#Parent image
 FROM mysql:latest
 
 #镜像创建者
@@ -18,5 +18,3 @@ EXPOSE 3306
 
 
 #Container启动时执行的命令，但是一个Dockerfile中只能有一条CMD命令，多条则只执行最后一条CMD.
-
-#docker build -t "i2fsp/mysql-osx:latest" .
