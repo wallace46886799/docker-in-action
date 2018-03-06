@@ -10,6 +10,7 @@ ENV TOMCAT_VERSION 8.0.42
 
 #安装软件用
 RUN mkdir -p /usr/local/tomcat/webapps/myproj
+#Tomcat的安装目录为/usr/local/tomcat
 COPY conf/context.xml /usr/local/tomcat/conf
 COPY conf/server.xml /usr/local/tomcat/conf
 #安装软件用
