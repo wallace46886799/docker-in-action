@@ -1,10 +1,10 @@
 # 操作步骤
 PS.请先阅读：https://dev.aliyun.com/detail.html?spm=5176.1972343.2.2.2f075aaaBU6Ush&repoId=1969
 
-0、构建本地镜像
+0、构建本地镜像 <br>
 docker build -t oracle_11g_myproj:v1 .
 
-1、创建本地挂接目录
+1、创建本地挂接目录 <br>
 mkdir -p ${pwd}/oracle/data <br>
 mkdir -p ${pwd}/oracle/flash_recovery_area/helowin <br>
 #mkdir -p /Users/Frank/Work/Frameworks/GitHub/docker-in-action/oracle/data <br>
