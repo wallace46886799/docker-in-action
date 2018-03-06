@@ -10,7 +10,10 @@ ENV TOMCAT_VERSION 8.0.42
 
 #安装软件用
 RUN mkdir -p /usr/local/tomcat/webapps/myproj
+COPY conf/context.xml /usr/local/tomcat/conf
+COPY conf/server.xml /usr/local/tomcat/conf
 #安装软件用
+
 
 
 #container内部服务开启的端口。主机上要用还得在启动container时，做host-container的端口映射：
