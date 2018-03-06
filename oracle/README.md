@@ -5,10 +5,10 @@ PS.请先阅读：https://dev.aliyun.com/detail.html?spm=5176.1972343.2.2.2f075a
 docker build -t oracle_11g_myproj:v1 .
 
 1、创建本地挂接目录
-mkdir -p ${pwd}/oracle/data
-mkdir -p ${pwd}/oracle/flash_recovery_area/helowin
-#mkdir -p /Users/Frank/Work/Frameworks/GitHub/docker-in-action/oracle/data
-#mkdir -p /Users/Frank/Work/Frameworks/GitHub/docker-in-action/oracle/flash_recovery_area/helowin
+mkdir -p ${pwd}/oracle/data <br>
+mkdir -p ${pwd}/oracle/flash_recovery_area/helowin <br>
+#mkdir -p /Users/Frank/Work/Frameworks/GitHub/docker-in-action/oracle/data <br>
+#mkdir -p /Users/Frank/Work/Frameworks/GitHub/docker-in-action/oracle/flash_recovery_area/helowin <br>
 
 2、运行docker容器
 docker run -d --name oracle_11g_myproj -p 1521:1521 oracle_11g_myproj:v1 -v ${pwd}/oracle/data:/home/oracle/app/oracle/oradata -v ${pwd}/oracle/flash_recovery_area/helowin:/home/oracle/app/oracle/flash_recovery_area/helowin
