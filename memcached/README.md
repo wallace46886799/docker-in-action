@@ -5,6 +5,8 @@ docker build -t redis_myproj:v1 .
 
 
 2、运行docker容器
-docker run --name redis_myproj:v1 -d memcached
+docker run -p 11211:11211 --name redis_myproj:v1 -d memcached
+
+例如：docker run -p 11211:11211 --name my-memcache -d memcached
 
 
