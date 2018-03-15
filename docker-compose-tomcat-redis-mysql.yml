@@ -1,9 +1,8 @@
 version: "2"
 services:
   app:
-    context: .
+    context: ${pwd}
     build: tomcat
-    image: tomcat:latest
     container_name: app
     depends_on:
       - redis
@@ -14,9 +13,8 @@ services:
       - ${my_proj}/ROOT:/usr/local/tomcat/webapps/ROOT
 
   redis:
-    context: .
+    context: ${pwd}
     build: redis
-    image: redis:latest
     container_name: redis
     ports:
       - 6379:6379     
@@ -24,9 +22,8 @@ services:
       - ${my_proj}/data:/data
 
   db:
-    context: .
+    context: ${pwd}
     build: mysql
-    image: mysql:latest
     container_name: db
     ports:
       - 3306:3306
