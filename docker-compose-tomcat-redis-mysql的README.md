@@ -1,8 +1,9 @@
 # docker-in-action
 docker-compose-tomcat-redis-mysql.yml完成了一键启动tomcat、redis、mysql<br/>
 ###运行命令
-docker-compose up -f docker-compose-tomcat-redis-mysql.yml -d
-
+docker-compose -f docker-compose-tomcat-redis-mysql.yml up  -d
+<br>
+其中：docker-compose-tomcat-redis-mysql.yml 也可以带上绝对路径
 ###文件说明
 context：是指路径的上下文，在build的过程中都会以这个目录为基准，寻找dockerfile<br>
 ${my_proj}：本地目录, 用于目录映射 <br>
