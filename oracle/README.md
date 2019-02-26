@@ -35,6 +35,8 @@ create user test identified by test;
 
 grant connect,resource,dba to test;
 
+4.导入数据
+imp test/test file=/opt/share/test.dmp fromuser=test touser=test
 
 
 
