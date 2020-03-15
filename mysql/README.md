@@ -11,7 +11,7 @@ docker run --name mysql_myproj -p 3306:3306 -v ${pwd}/mysql/data:/var/lib/mysql 
 
 #docker run --name mysql_myproj -p 3306:3306 -v /Users/Frank/Work/Docker/mysql/data:/var/lib/mysql -v /Users/Frank/Work/Docker/mysql/conf:/etc/mysql/conf.d  -e MYSQL_ROOT_PASSWORD=123456 -d  mysql_myproj:v1
 
-# 导出导入
+# 导出数据
 ## 1、备份命令
 格式：mysqldump -h主机名 -P端口 -u用户名 -p密码 --database 数据库名 > 文件名.sql
 例如： mysqldump -h 192.168.1.100 -p 3306 -uroot -ppassword --database cmdb > /data/backup/cmdb.sql
@@ -40,3 +40,20 @@ docker run --name mysql_myproj -p 3306:3306 -v ${pwd}/mysql/data:/var/lib/mysql 
 ## 7、备份数据库结构，不备份数据
 格式：mysqldump -h主机名 -P端口 -u用户名 -p密码 --no-data 数据库名1 数据库名2 数据库名3 > 文件名.sql
 例如：mysqldump --no-data –databases db1 db2 cmdb > /data/backup/structure.sql
+
+
+# 导入数据库
+## 1、首先建空数据库
+mysql>create database abc;
+
+## 2、导入数据库
+### 方法一：
+（1）选择数据库
+mysql>use abc;
+（2）设置数据库编码
+mysql>set names utf8;
+（3）导入数据（注意sql文件的路径）
+mysql>source /home/abc/abc.sql;
+### 方法二：
+mysql -u用户名 -p密码 数据库名 < 数据库名.sql
+#mysql -uabc_f -p abc < abc.sql
