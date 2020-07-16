@@ -16,3 +16,4 @@ https://docs.docker.com/compose/install/
 2、完成docker-compose.yml的编写，保证启动后tomcat可以访问memcache（redis）和oracle（mysql）。<br>
 3、完成flyway脚本化sql导入方案。<br>
 4、完善docker-compose.yml，形成自建局域网。
+5、未完待续。
