@@ -11,3 +11,6 @@ docker run --name redis_myproj  -p 6379:6379 -v ${pwd}/data:/data -d redis_mypro
 例如：docker run --name redis_myproj  -p 6379:6379 -v /Users/Frank/Work/Frameworks/GitHub/docker-in-action/redis/data:/data -d redis_myproj:v1
 
 
+3、Redis Cluster：https://github.com/Grokzen/docker-redis-cluster
+
+
