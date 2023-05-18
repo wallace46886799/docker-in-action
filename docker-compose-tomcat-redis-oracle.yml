@@ -1,0 +1,28 @@
+version: "2"
+services:
+  app:
+    build:
+      context: /work/dockerTest/compose/
+      dockerfile: tomcat
+    container_name: app
+    depends_on:
+      - memcached
+      - db
+    ports:
+      - 8080:8080
+    volumes:
+      - /work/dockerTest/data/tomcat/ROOT:/usr/local/tomcat/webapps/ROOT
+
+  memcached:
+    build: /work/dockerTest/compose/memcached
+    container_name: memcached
+    ports:
+      - 11211:11211
+
+  db:
+    build: 
+      context: /work/dockerTest/compose/
+      dockerfile: oracle
+    container_name: db-oracle
+    ports:
+      - 1521:1521       
